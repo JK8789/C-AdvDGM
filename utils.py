@@ -232,8 +232,6 @@ def load_model_and_weights(
     model_class = load_model(model_name)
     print(model_class)
     weight_path = custom_path
-    print(metadata)
-    print(scaler_type)
     if not os.path.exists(weight_path):
         print("{} not found. Skipping".format(weight_path))
         return
