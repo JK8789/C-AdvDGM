@@ -16,7 +16,6 @@ from cdgm.synthetizers.utils import get_discrete_col, get_not_modif_idx, get_mod
 from cdgm.synthetizers.utils import apply_activate, apply_constrained, get_sets_constraints, adversarial_loss, round_func_BPDA
 from utils import NumpyArrayIterator
 import wandb
-from evaluation.eval_asr_random_sampling import random_sphere_torch
 
 
 
