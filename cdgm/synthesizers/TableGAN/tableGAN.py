@@ -10,13 +10,13 @@ import torch.optim.lr_scheduler as lr_scheduler
 from torch.utils.data import DataLoader, TensorDataset
 from tqdm import tqdm
 from torch.nn import functional as F
-from cdgm.synthetizers.TableGAN.base_tableGAN import LegacySingleTableBaseline
+from cdgm.synthesizers.TableGAN.base_tableGAN import LegacySingleTableBaseline
 from cdgm.data_processors.wgan.tab_scaler import TabScaler
 from cdgm.constraints_code.correct_predictions import correct_preds
-from cdgm.synthetizers.TableGAN.blocks import Generator, Discriminator
-from cdgm.synthetizers.TableGAN.blocks import determine_layers, get_optimizer, weights_init
-from cdgm.synthetizers.pcgrad import PCGrad
-from cdgm.synthetizers.utils import get_sets_constraints, adversarial_loss, round_func_BPDA
+from cdgm.synthesizers.TableGAN.blocks import Generator, Discriminator
+from cdgm.synthesizers.TableGAN.blocks import determine_layers, get_optimizer, weights_init
+from cdgm.synthesizers.pcgrad import PCGrad
+from cdgm.synthesizers.utils import get_sets_constraints, adversarial_loss, round_func_BPDA
 
 
 def _apply_constrained(self, fake):

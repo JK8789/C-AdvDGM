@@ -10,10 +10,10 @@ import numpy as np
 from cdgm.constraints_code.correct_predictions import correct_preds
 from cdgm.data_processors.ctgan.data_sampler import DataSampler
 from cdgm.data_processors.ctgan.data_transformer import DataTransformer
-from cdgm.synthetizers.CTGAN.base_ctgan import BaseSynthesizer, random_state
-from cdgm.synthetizers.CTGAN.blocks import Generator, Discriminator, define_optimizer
-from cdgm.synthetizers.utils import get_discrete_col, get_not_modif_idx, get_modes_idx
-from cdgm.synthetizers.utils import apply_activate, apply_constrained, get_sets_constraints, adversarial_loss, round_func_BPDA
+from cdgm.synthesizers.CTGAN.base_ctgan import BaseSynthesizer, random_state
+from cdgm.synthesizers.CTGAN.blocks import Generator, Discriminator, define_optimizer
+from cdgm.synthesizers.utils import get_discrete_col, get_not_modif_idx, get_modes_idx
+from cdgm.synthesizers.utils import apply_activate, apply_constrained, get_sets_constraints, adversarial_loss, round_func_BPDA
 from utils import NumpyArrayIterator
 import wandb
 

@@ -11,7 +11,7 @@ import wandb
 
 sys.path.append('.')
 
-from cdgm.synthetizers.TVAE.tvae import TVAE
+from cdgm.synthesizers.TVAE.tvae import TVAE
 from evaluation.eval_asr import attack_asr_time
 from utils import _load_json, read_csv, set_seed, load_model_and_weights, get_max_decimal_places
 

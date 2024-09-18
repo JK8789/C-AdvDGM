@@ -14,12 +14,12 @@ import wandb
 import numpy as np
 
 
-from cdgm.synthetizers.WGAN.wgan import  train_model
+from cdgm.synthesizers.WGAN.wgan import  train_model
 from utils import _load_json, read_csv, set_seed, load_model_and_weights
 from utils import get_max_decimal_places, set_pac_val
 from evaluation.eval_asr import attack_asr_time
 from evaluation.cons_check import cons_sat_check
-from cdgm.synthetizers.WGAN.wgan import sample as sample_wgan
+from cdgm.synthesizers.WGAN.wgan import sample as sample_wgan
 
 warnings.filterwarnings(action='ignore')
 torch.set_printoptions(sci_mode=False)

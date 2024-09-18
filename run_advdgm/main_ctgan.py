@@ -10,7 +10,7 @@ import pandas as pd
 import wandb
 sys.path.append('.')
 
-from cdgm.synthetizers.CTGAN.ctgan import CTGAN
+from cdgm.synthesizers.CTGAN.ctgan import CTGAN
 from evaluation.eval_asr import attack_asr_time
 from utils import _load_json, set_pac_val, read_csv, set_seed, load_model_and_weights, get_max_decimal_places
 

@@ -11,7 +11,7 @@ from torch.utils.data import Dataset, DataLoader
 
 from cdgm.constraints_code.correct_predictions import correct_preds
 from cdgm.data_processors.wgan.tab_scaler import TabScaler
-from cdgm.synthetizers.utils import get_sets_constraints, adversarial_loss, round_func_BPDA
+from cdgm.synthesizers.utils import get_sets_constraints, adversarial_loss, round_func_BPDA
 
 # from helpers.eval import  eval
 warnings.filterwarnings(action='ignore')

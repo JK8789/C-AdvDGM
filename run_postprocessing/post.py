@@ -15,7 +15,7 @@ from cdgm.constraints_code.parser import parse_constraints_file
 from evaluation.eval_asr import  calc_adv_success_rate
 from utils import read_csv, set_seed, _load_json
 from utils import _load_json, set_pac_val, read_csv, set_seed, load_model_and_weights, get_max_decimal_places
-from cdgm.synthetizers.utils import get_sets_constraints, round_func_BPDA
+from cdgm.synthesizers.utils import get_sets_constraints, round_func_BPDA
 
 warnings.filterwarnings(action='ignore')
 torch.set_printoptions(sci_mode=False)

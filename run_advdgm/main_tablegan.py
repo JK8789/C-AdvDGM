@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import wandb
 import joblib
-from cdgm.synthetizers.TableGAN.tableGAN import TableGAN
+from cdgm.synthesizers.TableGAN.tableGAN import TableGAN
 from utils import _load_json, read_csv, set_seed, load_model_and_weights, get_max_decimal_places
 from train_target.faults_nn_pl import MLP
 from evaluation.eval_asr import attack_asr_time

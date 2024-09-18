@@ -7,8 +7,8 @@ import numpy as np
 import torch
 import pickle
 
-from cdgm.synthetizers.WGAN.wgan import sample as sample_wgan
-from cdgm.synthetizers.utils import get_modes_idx
+from cdgm.synthesizers.WGAN.wgan import sample as sample_wgan
+from cdgm.synthesizers.utils import get_modes_idx
 from evaluation.cons_check import cons_sat_check
 from utils import get_model_preds
 
