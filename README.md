@@ -20,9 +20,9 @@ To train target models use mlc/run/train_search.py for hyperparameter search and
 
 To apply C-AdvDGM you can first perform hyperparameter search for each model by using the script files bash_scripts/hyperparam_search
 Then for the best hyperparameters you need to run the attack. 
-To apply postprocessing on the already generated data from the unconstrained models you can follow the example of https://github.com/salijona/C-AdvDGM/blob/main/bash_scripts/postprocessing.sh
+To apply postprocessing on the already generated data from the unconstrained models you can follow the example of bash_scripts/postprocessing.sh
 
 The experiments log the results on wandb, therefore you need to set your credentials on the code.
 
-K
+
 
