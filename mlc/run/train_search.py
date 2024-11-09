@@ -16,7 +16,7 @@ from mlc.metrics.compute import compute_metric, compute_metrics
 from mlc.metrics.metric_factory import create_metric
 from mlc.models.model_factory import load_model
 from mlc.transformers.tab_scaler import TabScaler
-from mlc.transformers.ctgan.data_transformer import DataTransformer
+from cdgm.data_processors.ctgan.data_transformer import DataTransformer
 from mlc.utils import cross_validation, parent_exists
 
 # Torch config to avoid crash on HPC
@@ -61,7 +61,10 @@ class Objective(object):
 
         experiment = XP(vars(args))
         save_path = f"./tmp/models/{args.dataset}_{args.model_name}.model"
-        model.save(save_path, train_search=True)
+        if args.model_name == "vime":
+            model.save(save_path)
+        else:
+            model.save(save_path, train_search=True)
         experiment.log_model(
             f"{args.dataset}_{args.model_name}.model", save_path
         )

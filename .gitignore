@@ -7,12 +7,10 @@ preliminary_eval/*
 synthetic_constraints_eleonora/*
 url/*
 WGAN_out/*
-*.sh
 *.pkl
 analysis/reeval_path_old
 *.csv
 *analysis/tsne/tsne_plots
 *reeval_paths
 models/*
-bash_scripts/*
 .vscode/*
