@@ -11,7 +11,7 @@ from mlc.datasets.dataset_factory import load_dataset
 from mlc.models.model_factory import load_model
 from argparse import ArgumentParser, Namespace
 from mlc.transformers.tab_scaler import TabScaler
-from mlc.transformers.ctgan.data_transformer import DataTransformer
+from cdgm.data_processors.ctgan.data_transformer import DataTransformer
 from mlc.metrics.compute import compute_metric, compute_metrics
 from mlc.metrics.metric_factory import create_metric
 from mlc.dataloaders import get_custom_dataloader
