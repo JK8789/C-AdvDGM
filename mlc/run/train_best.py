@@ -102,6 +102,9 @@ def run(dataset_name: str = "lcld_v2_iid", model_name: str = "tabtransformer",  
     
     if model_name == "torchrln":
         args["weight_decay"] = 0
+        args["n_layers"] = 5
+        args["hidden_dim"] = 100
+        args["learning_rate"] = 0.001
 
     best_args = {**args, "task": "train", "trial": "best"}
     if len(study.trials) > 1:
