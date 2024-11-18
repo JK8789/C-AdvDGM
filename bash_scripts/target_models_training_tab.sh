@@ -6,13 +6,13 @@
 #SBATCH --qos=normal
 #
 # Number of tasks needed for use case (example):
-#SBATCH --ntasks=2
+#SBATCH --ntasks=16
 #
 # Processors per task:
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=128
 #
 # Wall clock limit (7 days in this case):
-#SBATCH --time=3:00:00
+#SBATCH --time=1-00:00:00
 #
 ## Command(s) to run (example):
 
