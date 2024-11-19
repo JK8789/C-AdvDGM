@@ -1,12 +1,12 @@
 #!/bin/bash -l
 # Job name:
-#SBATCH --job-name=wgan_torchrln
+#SBATCH --job-name=wgan_tabtransformer
 #
 # QoS: must be savio_long for jobs &gt; 3 days
 #SBATCH --qos=normal
 #
 # Number of tasks needed for use case (example):
-#SBATCH --ntasks=32
+#SBATCH --ntasks=16
 #
 # Processors per task:
 #SBATCH --cpus-per-task=128
@@ -29,7 +29,7 @@ use_case="url"
 wandbp="AdvCDGM_hyper_search_${model}"
 version="constrained"
 scaler_type="TabScalerOHE"
-target_model="torchrln"
+target_model="tabtransformer"
 seeds="1"
 eps=40
 

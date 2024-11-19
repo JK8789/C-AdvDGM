@@ -1,6 +1,6 @@
 #!/bin/bash -l
 # Job name:
-#SBATCH --job-name=postprocessing_vime
+#SBATCH --job-name=postprocessing_torch
 #
 # QoS: must be savio_long for jobs &gt; 3 days
 #SBATCH --qos=normal
@@ -17,7 +17,7 @@
 conda activate project
 
 model="WGAN"
-target_models="vime"
+target_models="torchrln"
 scaler_type="TabScalerOHE"
 
 use_cases="url"
