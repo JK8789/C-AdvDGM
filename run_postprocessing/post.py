@@ -41,12 +41,17 @@ def get_args():
 
 def get_model_paths(args):
     existing_model_paths = []
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*19-07-24*"))
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*20-07-24*"))
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*21-07-24*"))
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*22-07-24*"))
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*23-07-24*"))
-    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*26-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*19-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*20-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*21-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*22-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*23-07-24*"))
+    #existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/unconstrained/{args.target_model}/*26-07-24*"))
+
+    print(f"path is outputs/{args.model_type}_out/{args.use_case}/constrained/{args.target_model}/*")
+    existing_model_paths.extend(glob.glob(f"outputs/{args.model_type}_out/{args.use_case}/hyperparam/constrained/{args.target_model}/*"))
+
+
     return existing_model_paths
 
 
@@ -104,11 +109,8 @@ def main():
     print(dataset_info)
     ######################################################################
 
-    if args.scaler_type == "TabScalerOHE":
-        path = f"models/best_models/{args.target_model}_{args.use_case}_default.model"
-    else:
-        path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
-        print("Model path", path)
+    path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
+    print("Model path", path)
     target_scaler = joblib.load(path+"/scaler.joblib")
     metadata = pd.read_csv(f"data/{args.use_case}/{args.use_case}_metadata.csv")
 
