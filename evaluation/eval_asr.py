@@ -55,7 +55,7 @@ def calc_adv_success_rate(args, adv_cand, sampled_data, target_model, target_sca
     # else:
     #     path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
 
-    dist_scaler_path = f"models/best_models/torchrln_{args.use_case}_default_{args.scaler_type}.model"
+    dist_scaler_path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
     dist_scaler = joblib.load(dist_scaler_path+"/scaler.joblib")
 
     adv_cand_scaled =  dist_scaler.transform(adv_cand.iloc[:, :-1].to_numpy())
