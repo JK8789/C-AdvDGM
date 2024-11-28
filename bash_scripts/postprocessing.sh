@@ -35,6 +35,7 @@ for use_case in $use_cases ;
 do
    for target in $target_models;
       do
-         python run_postprocessing/post.py  ${use_case} ${model} --target_model=$target --scaler_type=$scaler_type --attacked_class 1
+         #python run_postprocessing/post.py  ${use_case} ${model} --target_model=$target --scaler_type=$scaler_type --attacked_class 1
+         python run_postprocessing/post.py  ${use_case} ${model} --target_model=$target --scaler_type=$scaler_type
       done
     done
