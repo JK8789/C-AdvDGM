@@ -56,14 +56,14 @@ def create_dataset() -> Dataset:
         url="https://uniluxembourg-my.sharepoint.com/:x:/g/personal/"
         "thibault_simonetto_uni_lu/"
         "ESKij8CqW6dAlIe3bW-6rk0BCyDZ7B1gLYI3OTLdlH2wGg?download=1",
-        file_data_source=CsvDataSource(path="./data/mlc/wids/wids.csv"),
+        file_data_source=CsvDataSource(path="./data/wids/train_data.csv"),
     )
     metadata_source = DownloadFileDataSource(
         url="https://uniluxembourg-my.sharepoint.com/:x:/g/personal/"
         "thibault_simonetto_uni_lu/"
         "EWZgana5BVJNgvCiM1I-Y7MBhXOw7MrxyjGWMg2FRnMCBA?download=1",
         file_data_source=CsvDataSource(
-            path="./data/mlc/wids/wids_metadata.csv"
+            path="./data/wids/wids_metadata.csv"
         ),
     )
     tasks = [

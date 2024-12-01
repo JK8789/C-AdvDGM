@@ -97,11 +97,8 @@ def main():
     args.train_data_cols = X_train.columns.values.tolist()
     args.dtypes = X_train.dtypes
     args.cat_idx = cat_idx
-    if args.scaler_type == "TabScalerOHE":
-        path = f"models/best_models/{args.target_model}_{args.use_case}_default.model"
-    else:
-        path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
-        print("Model path", path)
+    path = f"models/best_models/{args.target_model}_{args.use_case}_default_{args.scaler_type}.model"
+    print("Model path", path)
     target_scaler = joblib.load(path+"/scaler.joblib")
     metadata = pd.read_csv(f"data/{args.use_case}/{args.use_case}_metadata.csv")
 

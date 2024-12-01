@@ -44,13 +44,13 @@ def create_dataset() -> Dataset:
     data_source = DownloadFileDataSource(
         url="",
         file_data_source=CsvDataSource(
-            path="./data/mlc/faults/faults.csv"
+            path="./data/faults/train_data.csv"
         ),
     )
     metadata_source = DownloadFileDataSource(
         url="",
         file_data_source=CsvDataSource(
-            path="./data/mlc/faults/faults_metadata.csv"
+            path="./data/faults/faults_metadata.csv"
         ),
     )
     tasks = [

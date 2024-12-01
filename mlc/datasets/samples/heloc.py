@@ -61,13 +61,13 @@ def create_dataset() -> Dataset:
     data_source = DownloadFileDataSource(
         url="",
         file_data_source=CsvDataSource(
-            path="./data/mlc/heloc/heloc.csv"
+            path="./data/heloc/train_data.csv"
         ),
     )
     metadata_source = DownloadFileDataSource(
         url="",
         file_data_source=CsvDataSource(
-            path="./data/mlc/heloc/heloc_metadata.csv"
+            path="./data/heloc/heloc_metadata.csv"
         ),
     )
     tasks = [
