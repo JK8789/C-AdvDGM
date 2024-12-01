@@ -25,4 +25,47 @@ To apply postprocessing on the already generated data from the unconstrained mod
 The experiments log the results on wandb, therefore you need to set your credentials on the code.
 
 
+Here is the changes summary:
 
+    Add bash scripts to the repo (remove one from .gitignore).
+    Add some extra auxiliary bash scripts.
+    Update pathes to the datasets in the "data" folder.
+    Add script for target models preparation.
+    Use python=3.9.20
+    Replace "from mlc.transformers.ctgan.data_transformer import DataTransformer"
+    by "from cdgm.data_processors"
+    Remove wrong parameter train_search for function save of model vime (no such
+    parameter for this function of the movel vime).
+    Fix ctgan.data_transformer path for tran_best script
+    Fix train_best.py for torchRLN
+    Use given model scaler in eval_asr instead hardcoded torch.
+    Use according scaler during the evaluation.
+
+
+ .gitignore                                       |  4 +-
+ Project.ipynb                                    |  1 +
+ README.md                                        |  2 +-
+ bash_scripts/hyperparam_search/ctgan.sh          |  0
+ bash_scripts/hyperparam_search/tablegan.sh       |  0
+ bash_scripts/hyperparam_search/tvae.sh           |  0
+ bash_scripts/hyperparam_search/wgan.sh           | 46 ++++++++++++-----
+ bash_scripts/hyperparam_search/wgan_tabular.sh   | 65 ++++++++++++++++++++++++
+ bash_scripts/hyperparam_search/wgan_vime.sh      | 65 ++++++++++++++++++++++++
+ bash_scripts/postprocessing.sh                   | 27 ++++++++--
+ bash_scripts/postprocessing_torch.sh             | 40 +++++++++++++++
+ bash_scripts/target_models_training.sh           | 10 ++++
+ bash_scripts/target_models_training_tab.sh       | 26 ++++++++++
+ bash_scripts/target_models_training_torch.sh     | 26 ++++++++++
+ bash_scripts/target_models_training_vime.sh      | 26 ++++++++++
+ bash_scripts/target_models_training_vime_crun.sh | 26 ++++++++++
+ evaluation/eval_asr.py                           |  4 +-
+ mlc/datasets/samples/faults.py                   |  4 +-
+ mlc/datasets/samples/heloc.py                    |  4 +-
+ mlc/datasets/samples/url.py                      |  4 +-
+ mlc/datasets/samples/wids.py                     |  4 +-
+ mlc/logging/comet_config.py                      |  4 +-
+ mlc/run/train_best.py                            |  5 +-
+ mlc/run/train_search.py                          |  7 ++-
+ run_advdgm/main_ctgan.py                         |  7 +--
+ run_postprocessing/post.py                       | 26 +++++-----
+ 26 files changed, 378 insertions(+), 55 deletions(-)
